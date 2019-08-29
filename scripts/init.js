@@ -17,12 +17,11 @@ const question = [
 ]
 const action = () =>
     prompt(question).then(({ template }) => {
-        const gitPlace = tplList[template].href
+        const gitPlace = tplList[template]['owner/name']
         const gitBranch = tplList[template].branch
         const spinner = ora('正在安装...')
         spinner.start()
-
-        download(`${gitPlace}#${gitBranch}`, './', { clone: true }, err => {
+        download(`${gitPlace}#${gitBranch}`, template, { clone: true }, err => {
             if (err) {
                 console.log(chalk.red(err))
                 process.exit()
