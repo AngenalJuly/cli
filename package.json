@@ -1,27 +1,16 @@
 {
-    "name": "my-cli",
-    "version": "1.0.0",
+    "name": "zfy-cli",
+    "version": "1.0.1",
     "description": "my-cli",
     "main": "bin/god",
     "keywords": [
         "god",
-        "god-cli"
+        "god-cli",
+        "zfy-cli"
     ],
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
+    "scripts": {},
     "bin": {
         "god": "bin/god"
-    },
-    "files": [
-        "bin",
-        "scripts",
-        "templates.json",
-        "util"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://gitee.com/zhangfeiyang/my-cli.git"
     },
     "author": "zhangfy",
     "license": "ISC",
