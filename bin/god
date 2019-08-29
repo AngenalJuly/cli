@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+const path = require('path')
+const util = require('../util')
+const program = require('commander')
+
+const rootPath = path.resolve(__dirname, '../')
+const commands = util.getFiles(path.join(rootPath, './scripts'))
+
+program.version(require('../package').version)
+
+program.usage('<command>')
+
+commands.forEach(item => {
+    const info = require(item)
+    const { command, description, alias, action } = info
+    program
+        .command(command)
+        .description(description)
+        .alias(alias)
+        .action(action)
+})
+
+program.parse(process.argv)
+
+if (!program.args.length) {
+    program.help()
+}

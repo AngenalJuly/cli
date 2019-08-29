@@ -1,0 +1,4 @@
+{
+    "react-spa": { "href": "https://github.com/AngenalJuly/react-spa", "branch": "master" },
+    "react-mpa": { "href": "https://github.com/AngenalJuly/react-mpa", "branch": "master" }
+}
